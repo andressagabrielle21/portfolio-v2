@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700&display=swap');
+
+//Colors
+$red-principal: #CA6262;
+$darker-red: #CD2626;
+
+//Font Sizes 
+//ORGANIZAR FONTES NO CSS APENAS!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.title-principal {
+    font-size: 48px;
+    font-weight: 600;
+}
+.title-principal-mobile {
+    font-size: 30px;
+    font-weight: 600;
+}
+.small-title {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#home {
+    background-color: $red-principal;
+    height: 80vh;
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        margin-left: 65%;
+        padding: 20px 10px;
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+    }
+
+    .content-home {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 100px 0 0 100px;
+        .text {
+            text-align: center;
+            .dot {
+                padding-top: 60px;
+            }
+        }
+    }
+}
+
+.space {
+    width:30%;
+    height:2px;
+    background-color: $red-principal;
+    margin: 30px auto;
+}
+
+#projects {
+    padding: 30px;
+    .gallery {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 30px;
+        .project {
+            width: 200px;
+            text-align: center;
+            .desc {
+                padding-top: 15px;
+            }
+        }
+    }
+}
+
+#footer {
+    background-color: #C4C4C4;
+    padding: 30px;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .contact {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+        align-items: center;
+        .vr-footer {
+            background-color: #000000;
+            width: 2px;
+            height: 100px;
+            margin: 0 60px;
+        }
+        .social {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                padding-bottom: 20px;
+            }
+            .icons {
+                display: flex;
+                align-items: center;
+                padding-bottom: 10px;
+                img {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+//Only for desktop
+@media only screen and (min-width: 721px){
+    #home {
+        .content-home {
+            .text {
+                .dot {
+                    padding-top: 60px;
+                }
+                img:hover {
+                    box-shadow: 0 0 6em #000000;
+                }
+            }
+        }
+    }
+    
+    #about {
+        display: flex;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            padding: 40px 30px;
+            align-items: center;
+        .text {
+            width: 450px;
+            line-height: 29px;
+            text-align: right;
+        }
+        .skills {
+            text-align: center;
+            img {
+                width: 100px;
+                margin-right: 30px;
+            }
+            .image-skills {
+                animation: .8s linear slidein; //Para desktop
+                padding: 30px 30px;
+                .image1, .image2, .image3, .image4, .image5, .image6 {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 15px;
+                }
+            }
+            
+        }
+    }
+}
+ 
+//MOBILE
+@media only screen and (max-width: 720px) {
+    #home {
+        height: 60vh;
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 10px;
+            margin: 0;
+        }
+        .content-home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 0 0 0;
+            .text {
+                text-align: center;
+                .dot {
+                    padding-top: 60px;
+                }
+            }
+        }
+        .profile-pic {
+            display: none;
+        }
+    }
+
+    #about {
+        .text {
+            text-align: center;
+            line-height: 26px;
+            padding: 30px 20px;
+        }
+
+        .skills {
+            text-align: center;
+            img {
+                width: 70px;
+                margin-right: 30px;
+            }
+            .image-skills {
+                padding: 30px 30px;
+                .image1, .image2, .image3, .image4, .image5, .image6 {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 20px;
+                }
+            }
+            
+        }
+    }
+
+    #projects {
+        padding: 30px;
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 30px;
+            .project {
+                width: 200px;
+                text-align: center;
+                .desc {
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+
+    #footer {
+        padding: 30px;
+        .contact {
+            display: flex;
+            padding: 30px 0;
+            flex-direction: column;
+            .vr-footer {
+                display: none;
+            }
+            .social {
+                display: flex;
+                flex-direction: column;
+                h3 {
+                    padding: 20px 0;
+                }
+                .icons {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 10px;
+                    img {
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

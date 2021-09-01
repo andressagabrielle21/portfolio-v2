@@ -116,8 +116,10 @@ body {
 
 #projects .gallery .project a img:hover {
   opacity: .5;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-box-shadow: 5px 2px 20px  #000000;
+          box-shadow: 5px 2px 20px  #000000;
 }
 
 #projects .gallery .project .desc {
@@ -186,6 +188,8 @@ body {
   #home .content-home .text .dot img:hover {
     -webkit-box-shadow: 0 0 20px 6px #e78267;
             box-shadow: 0 0 20px 6px #e78267;
+    -webkit-transition: .6s;
+    transition: .6s;
   }
   #about {
     display: -webkit-box;

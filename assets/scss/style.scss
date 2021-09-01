@@ -91,7 +91,8 @@ body {
                 }
                 img:hover {
                     opacity: .5;
-                    transition: .5s;
+                    transition: .6s;
+                    box-shadow: 5px 2px 20px  #000000;
                 }
             }
             .desc {
@@ -146,6 +147,7 @@ body {
                 .dot {
                     img:hover {
                         box-shadow: 0 0 20px 6px #e78267;
+                        transition: .6s;
                     }
                 }
             }
@@ -181,6 +183,7 @@ body {
             
         }
     }
+
 }
  
 //MOBILE

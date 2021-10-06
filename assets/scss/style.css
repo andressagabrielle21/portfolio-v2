@@ -184,12 +184,76 @@ body {
   padding-right: 10px;
 }
 
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 @media only screen and (min-width: 721px) {
+  #home .content-home .text {
+    -webkit-animation-name: moveInLeft;
+            animation-name: moveInLeft;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+  }
   #home .content-home .text .dot img:hover {
     -webkit-box-shadow: 0 0 20px 6px #e78267;
             box-shadow: 0 0 20px 6px #e78267;
     -webkit-transition: .6s;
     transition: .6s;
+  }
+  #home .content-home .profile-pic {
+    -webkit-animation-name: moveInRight;
+            animation-name: moveInRight;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
   }
   #about {
     display: -webkit-box;
@@ -236,7 +300,7 @@ body {
 
 @media only screen and (max-width: 720px) {
   #home {
-    height: 60vh;
+    height: 90vh;
   }
   #home .navbar {
     display: -webkit-box;
@@ -257,7 +321,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 100px 0 0 0;
+    padding: 140px 0 0 0;
   }
   #home .content-home .text {
     text-align: center;

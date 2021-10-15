@@ -61,6 +61,7 @@ body {
                 padding-top: 60px;
                 img {
                     border-radius: 90px;
+                    animation: infiniteUpDown 1.5s infinite ;
                 }
             }
         }
@@ -163,6 +164,15 @@ body {
     }
 }
 
+@keyframes infiniteUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50%);
+    }
+}
+
 
 //Only for desktop
 @media only screen and (min-width: 721px){
@@ -195,6 +205,21 @@ body {
             width: 450px;
             line-height: 29px;
             text-align: right;
+            .btn-about {
+                display: inline-block;
+                text-decoration: none;
+                margin-top: 20px;
+                padding: 15px 40px;
+                background: rgb(202,98,98);
+                color: #fff;
+                text-transform: uppercase;
+                border-radius: 50px;
+                transition: all .5s;
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 10px 10px rgba(0,0,0,.3);;
+                }
+            }
         }
         .skills {
             text-align: center;

@@ -78,6 +78,8 @@ body {
 
 #home .content-home .text .dot img {
   border-radius: 90px;
+  -webkit-animation: infiniteUpDown 1.5s infinite;
+          animation: infiniteUpDown 1.5s infinite;
 }
 
 .space {
@@ -236,6 +238,28 @@ body {
   }
 }
 
+@-webkit-keyframes infiniteUpDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+@keyframes infiniteUpDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
 @media only screen and (min-width: 721px) {
   #home .content-home .text {
     -webkit-animation-name: moveInLeft;
@@ -274,6 +298,24 @@ body {
     width: 450px;
     line-height: 29px;
     text-align: right;
+  }
+  #about .text .btn-about {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 15px 40px;
+    background: #ca6262;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  #about .text .btn-about:hover {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   }
   #about .skills {
     text-align: center;

@@ -29,7 +29,16 @@ body {
 #home {
   background: #ca6262;
   background: linear-gradient(173deg, #ca6262 22%, #cb4848 64%, #cd2626 92%);
-  height: 80vh;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 #home .navbar {
@@ -65,7 +74,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 100px 0 0 100px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 10% 0;
 }
 
 #home .content-home .text {
@@ -82,9 +93,29 @@ body {
           animation: infiniteUpDown 1.5s infinite;
 }
 
+#about .text .btn-about {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 15px 40px;
+  background: #ca6262;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 50px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#about .text .btn-about:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
 .space {
   width: 30%;
-  height: 2px;
+  height: 1.5px;
   background-color: #CA6262;
   margin: 30px auto;
 }
@@ -262,6 +293,7 @@ body {
 
 @media only screen and (min-width: 721px) {
   #home .content-home .text {
+    width: 400px;
     -webkit-animation-name: moveInLeft;
             animation-name: moveInLeft;
     -webkit-animation-duration: 3s;
@@ -274,6 +306,7 @@ body {
     transition: .6s;
   }
   #home .content-home .profile-pic {
+    width: 400px;
     -webkit-animation-name: moveInRight;
             animation-name: moveInRight;
     -webkit-animation-duration: 3s;
@@ -342,7 +375,7 @@ body {
 
 @media only screen and (max-width: 720px) {
   #home {
-    height: 90vh;
+    height: 100vh;
   }
   #home .navbar {
     display: -webkit-box;
@@ -375,9 +408,20 @@ body {
     display: none;
   }
   #about .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
     text-align: center;
     line-height: 26px;
-    padding: 30px 20px;
+    padding: 30% 10%;
   }
   #about .skills {
     text-align: center;

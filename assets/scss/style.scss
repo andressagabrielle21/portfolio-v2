@@ -33,7 +33,10 @@ body {
 #home {
     background: rgb(202,98,98);
     background: linear-gradient(173deg, rgba(202,98,98,1) 22%, rgba(203,72,72,1) 64%, rgba(205,38,38,1) 92%);
-    height: 80vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     .navbar {
         display: flex;
         justify-content: space-around;
@@ -54,15 +57,36 @@ body {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        padding: 100px 0 0 100px;
+        align-content: center; 
+        margin: 10% 0;
         .text {
             text-align: center;
             .dot {
                 padding-top: 60px;
                 img {
                     border-radius: 90px;
-                    animation: infiniteUpDown 1.5s infinite ;
+                    animation: infiniteUpDown 1.5s infinite;
                 }
+            }
+        }
+    }
+}
+
+#about {
+    .text {
+        .btn-about {
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: rgb(202,98,98);
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all .5s;
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 10px rgba(0,0,0,.3);;
             }
         }
     }
@@ -70,7 +94,7 @@ body {
 
 .space {
     width:30%;
-    height:2px;
+    height:1.5px;
     background-color: $red-principal;
     margin: 30px auto;
 }
@@ -174,11 +198,12 @@ body {
 }
 
 
-//Only for desktop
+//DESKTOP
 @media only screen and (min-width: 721px){
     #home {
         .content-home {
             .text {
+                width: 400px;
                 animation-name: moveInLeft;
                 animation-duration: 3s;
                 .dot {
@@ -189,6 +214,7 @@ body {
                 }
             }
             .profile-pic {
+                width: 400px;
                 animation-name: moveInRight;
                 animation-duration: 3s;
             }
@@ -245,7 +271,7 @@ body {
 //MOBILE
 @media only screen and (max-width: 720px) {
     #home {
-        height: 90vh;
+        height: 100vh;
         .navbar {
             display: flex;
             justify-content: space-around;
@@ -271,9 +297,13 @@ body {
 
     #about {
         .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
             text-align: center;
             line-height: 26px;
-            padding: 30px 20px;
+            padding: 30% 10%;
         }
 
         .skills {

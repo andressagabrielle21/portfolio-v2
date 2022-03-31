@@ -27,8 +27,8 @@ body {
 }
 
 #home {
-  background: #ca6262;
-  background: linear-gradient(173deg, #ca6262 22%, #cb4848 64%, #cd2626 92%);
+  background: #d64141;
+  background: linear-gradient(207deg, #d64141 0%, #6c2828 11%, #280f0f 32%, black 66%);
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,6 +39,7 @@ body {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  color: #fff;
 }
 
 #home .navbar {
@@ -55,12 +56,14 @@ body {
 }
 
 #home .navbar a {
-  color: #000000;
+  color: #fff;
   text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 #home .navbar a:hover {
-  text-decoration: line-through;
+  text-decoration: underline;
   font-weight: 600;
 }
 
@@ -80,17 +83,33 @@ body {
 }
 
 #home .content-home .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
-#home .content-home .text .dot {
-  padding-top: 60px;
+#home .content-home .text .learnMore p {
+  padding: 20px 0 20px 0;
 }
 
-#home .content-home .text .dot img {
-  border-radius: 90px;
+#home .content-home .text .learnMore .dot {
   -webkit-animation: infiniteUpDown 1.5s infinite;
           animation: infiniteUpDown 1.5s infinite;
+  width: 90px;
+  background-color: #CA6262;
+  border-radius: 90px;
+}
+
+#home .content-home .text .learnMore .dot img {
+  padding: 25px;
 }
 
 #about .text .btn-about {
@@ -144,7 +163,7 @@ body {
 #projects .gallery .project a img {
   -webkit-box-shadow: 5px 2px 10px  #000000;
           box-shadow: 5px 2px 10px  #000000;
-  border-radius: 50px;
+  border-radius: 15px;
 }
 
 #projects .gallery .project a img:hover {
@@ -160,8 +179,9 @@ body {
 }
 
 #footer {
-  background-color: #C4C4C4;
+  background-color: #000;
   padding: 30px;
+  color: #fff;
 }
 
 #footer a {
@@ -180,10 +200,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 28px;
+}
+
+#footer .contact a:hover {
+  text-decoration: underline;
 }
 
 #footer .contact .vr-footer {
-  background-color: #000000;
+  background-color: #fff;
   width: 2px;
   height: 100px;
   margin: 0 60px;
@@ -210,7 +235,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 #footer .contact .social .icons img {
@@ -293,24 +318,27 @@ body {
 
 @media only screen and (min-width: 721px) {
   #home .content-home .text {
-    width: 400px;
+    width: 35%;
     -webkit-animation-name: moveInLeft;
             animation-name: moveInLeft;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-duration: 2.5;
+            animation-duration: 2.5;
   }
-  #home .content-home .text .dot img:hover {
+  #home .content-home .text .learnMore .dot {
+    margin-left: 3rem;
+  }
+  #home .content-home .text .learnMore .dot:hover {
     -webkit-box-shadow: 0 0 20px 6px #e78267;
             box-shadow: 0 0 20px 6px #e78267;
     -webkit-transition: .6s;
     transition: .6s;
   }
   #home .content-home .profile-pic {
-    width: 400px;
+    width: 450px;
     -webkit-animation-name: moveInRight;
             animation-name: moveInRight;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
   }
   #about {
     display: -webkit-box;
@@ -402,7 +430,7 @@ body {
     text-align: center;
   }
   #home .content-home .text .dot {
-    padding-top: 60px;
+    margin-left: 2rem;
   }
   #home .profile-pic {
     display: none;
